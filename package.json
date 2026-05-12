@@ -1,0 +1,11 @@
+{
+  "name": "reece-icon-packs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Office Add-in for inserting SVG icons into Word and PowerPoint.",
+  "scripts": {
+    "build": "node scripts/build-icon-index.mjs",
+    "serve": "node scripts/build-icon-index.mjs && npx --yes http-server docs -p 8080 -c-1"
+  }
+}

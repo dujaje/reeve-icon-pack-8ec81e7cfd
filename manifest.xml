@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+  Reece Icon Packs - Office Add-in manifest
+  ==========================================
+  Before deploying, search-and-replace these placeholders:
+    {{GITHUB_USERNAME}}  - your GitHub username or org name
+    {{REPO_NAME}}        - the repository name (use an unguessable suffix for "private" hosting)
+
+  Then deploy via Microsoft 365 Admin Center > Integrated Apps > Upload custom app.
+-->
+<OfficeApp
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+  xsi:type="TaskPaneApp">
+
+  <Id>9A84042A-DF01-41CA-B08E-A64B91D09007</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Reece</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Reece Icon Packs"/>
+  <Description DefaultValue="Browse and insert SVG icons from your team's icon library."/>
+  <IconUrl DefaultValue="https://{{GITHUB_USERNAME}}.github.io/{{REPO_NAME}}/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://{{GITHUB_USERNAME}}.github.io/{{REPO_NAME}}/assets/icon-64.png"/>
+  <SupportUrl DefaultValue="https://github.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}"/>
+
+  <AppDomains>
+    <AppDomain>https://{{GITHUB_USERNAME}}.github.io</AppDomain>
+  </AppDomains>
+
+  <Hosts>
+    <Host Name="Document"/>
+    <Host Name="Presentation"/>
+  </Hosts>
+
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://{{GITHUB_USERNAME}}.github.io/{{REPO_NAME}}/index.html"/>
+  </DefaultSettings>
+
+  <Permissions>ReadWriteDocument</Permissions>
+
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Document">
+        <DesktopFormFactor>
+          <GetStarted>
+            <Title resid="GetStarted.Title"/>
+            <Description resid="GetStarted.Description"/>
+            <LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
+          </GetStarted>
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <OfficeTab id="TabHome">
+              <Group id="WordIconsGroup">
+                <Label resid="GroupLabel"/>
+                <Icon>
+                  <bt:Image size="16" resid="Icon16"/>
+                  <bt:Image size="32" resid="Icon32"/>
+                  <bt:Image size="80" resid="Icon80"/>
+                </Icon>
+                <Control xsi:type="Button" id="WordOpenTaskPaneButton">
+                  <Label resid="TaskPaneButton.Label"/>
+                  <Supertip>
+                    <Title resid="TaskPaneButton.Label"/>
+                    <Description resid="TaskPaneButton.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon16"/>
+                    <bt:Image size="32" resid="Icon32"/>
+                    <bt:Image size="80" resid="Icon80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ReeceIconsPane</TaskpaneId>
+                    <SourceLocation resid="Taskpane.Url"/>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+      <Host xsi:type="Presentation">
+        <DesktopFormFactor>
+          <GetStarted>
+            <Title resid="GetStarted.Title"/>
+            <Description resid="GetStarted.Description"/>
+            <LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
+          </GetStarted>
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <OfficeTab id="TabHome">
+              <Group id="PPTIconsGroup">
+                <Label resid="GroupLabel"/>
+                <Icon>
+                  <bt:Image size="16" resid="Icon16"/>
+                  <bt:Image size="32" resid="Icon32"/>
+                  <bt:Image size="80" resid="Icon80"/>
+                </Icon>
+                <Control xsi:type="Button" id="PPTOpenTaskPaneButton">
+                  <Label resid="TaskPaneButton.Label"/>
+                  <Supertip>
+                    <Title resid="TaskPaneButton.Label"/>
+                    <Description resid="TaskPaneButton.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon16"/>
+                    <bt:Image size="32" resid="Icon32"/>
+                    <bt:Image size="80" resid="Icon80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ReeceIconsPane</TaskpaneId>
+                    <SourceLocation resid="Taskpane.Url"/>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="Icon16" DefaultValue="https://{{GITHUB_USERNAME}}.github.io/{{REPO_NAME}}/assets/icon-16.png"/>
+        <bt:Image id="Icon32" DefaultValue="https://{{GITHUB_USERNAME}}.github.io/{{REPO_NAME}}/assets/icon-32.png"/>
+        <bt:Image id="Icon80" DefaultValue="https://{{GITHUB_USERNAME}}.github.io/{{REPO_NAME}}/assets/icon-80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://github.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://{{GITHUB_USERNAME}}.github.io/{{REPO_NAME}}/index.html"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="GetStarted.Title" DefaultValue="Reece Icon Packs"/>
+        <bt:String id="GroupLabel" DefaultValue="Reece Icons"/>
+        <bt:String id="TaskPaneButton.Label" DefaultValue="Icon Library"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="GetStarted.Description" DefaultValue="Browse and insert SVG icons from your team's icon library."/>
+        <bt:String id="TaskPaneButton.Tooltip" DefaultValue="Open the Reece Icon Packs task pane to browse and insert icons."/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>
