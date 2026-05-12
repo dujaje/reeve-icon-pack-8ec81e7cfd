@@ -1,4 +1,4 @@
-# Reece Icon Packs
+# Reeve Icon Pack
 
 A Microsoft Word + PowerPoint add-in that gives your team one-click access to a shared library of SVG icons, organised into bundles.
 
@@ -43,7 +43,7 @@ git init
 git add -A
 git commit -m "Initial scaffold"
 # Replace YOUR_USERNAME and pick a random suffix
-gh repo create reece-icon-packs-7a3f9b2c1d --public --source=. --push
+gh repo create reeve-icon-pack-7a3f9b2c1d --public --source=. --push
 ```
 
 > The repo is public (required for free GitHub Pages) but the URL is unguessable. Anyone with the URL can see the icons; nobody can find it without it.
@@ -55,7 +55,7 @@ In the repo settings → **Pages**, set **Source** to **GitHub Actions**. The fi
 Your add-in will then be hosted at:
 
 ```
-https://YOUR_USERNAME.github.io/reece-icon-packs-7a3f9b2c1d/
+https://YOUR_USERNAME.github.io/reeve-icon-pack-7a3f9b2c1d/
 ```
 
 ### 3. Wire the URL into the manifest
@@ -76,7 +76,7 @@ Commit + push.
 1. Go to **Microsoft 365 Admin Center** → **Settings** → **Integrated apps** → **Upload custom apps**.
 2. Choose **Office Add-in** → **Provide link to manifest file**, paste:
    ```
-   https://YOUR_USERNAME.github.io/reece-icon-packs-7a3f9b2c1d/manifest.xml
+   https://YOUR_USERNAME.github.io/reeve-icon-pack-7a3f9b2c1d/manifest.xml
    ```
    ⚠️ The manifest needs to be served from Pages too. Either commit `manifest.xml` to `docs/` (in addition to repo root) **or** upload the local file directly in the admin portal.
 3. Assign to **Everyone** (or a specific group).

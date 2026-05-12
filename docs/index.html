@@ -3,14 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Reece Icon Packs</title>
+  <title>Reeve Icon Pack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" />
   <link rel="stylesheet" href="taskpane.css" />
   <script src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
 </head>
 <body>
   <header>
-    <h1>Reece Icon Packs</h1>
-    <input id="search" type="search" placeholder="Search icons…" autocomplete="off" />
+    <div class="brand">
+      <svg class="brand-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Reeve mark">
+        <g stroke="currentColor" stroke-width="1.4" stroke-linecap="round" fill="none">
+          <line x1="20" y1="20" x2="50" y2="20"/><line x1="50" y1="20" x2="80" y2="20"/>
+          <line x1="20" y1="50" x2="50" y2="50"/><line x1="50" y1="50" x2="80" y2="50"/>
+          <line x1="20" y1="80" x2="50" y2="80"/><line x1="50" y1="80" x2="80" y2="80"/>
+          <line x1="20" y1="20" x2="20" y2="50"/><line x1="20" y1="50" x2="20" y2="80"/>
+          <line x1="80" y1="20" x2="80" y2="50"/><line x1="80" y1="50" x2="80" y2="80"/>
+          <line x1="50" y1="50" x2="50" y2="80"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="20" cy="20" r="4"/><circle cx="80" cy="20" r="4"/>
+          <circle cx="20" cy="50" r="4"/><circle cx="50" cy="50" r="4"/><circle cx="80" cy="50" r="4"/>
+          <circle cx="20" cy="80" r="4"/><circle cx="50" cy="80" r="4"/><circle cx="80" cy="80" r="4"/>
+        </g>
+        <circle cx="50" cy="20" r="6.5" fill="#C8553D"/>
+      </svg>
+      <h1>Reeve Icon Pack</h1>
+    </div>
+    <input id="search" type="search" placeholder="Search icons…" autocomplete="off" spellcheck="false" />
   </header>
   <nav id="tabs" role="tablist"></nav>
   <main id="content">

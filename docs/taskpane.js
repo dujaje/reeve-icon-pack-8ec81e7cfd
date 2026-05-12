@@ -1,4 +1,4 @@
-/* Reece Icon Packs - task pane logic
+/* Reeve Icon Pack - task pane logic
  *
  * Loads icons.json (built by scripts/build-icon-index.mjs), renders bundles as tabs,
  * and inserts the clicked SVG into the active Word document or PowerPoint slide.
