@@ -24,6 +24,8 @@ jobs:
           node-version: '20'
       - name: Build icon index
         run: node scripts/build-icon-index.mjs
+      - name: Copy manifest into Pages output
+        run: cp manifest.xml docs/manifest.xml
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -2,11 +2,8 @@
 <!--
   Reece Icon Packs - Office Add-in manifest
   ==========================================
-  Before deploying, search-and-replace these placeholders:
-    {{GITHUB_USERNAME}}  - your GitHub username or org name
-    {{REPO_NAME}}        - the repository name (use an unguessable suffix for "private" hosting)
-
-  Then deploy via Microsoft 365 Admin Center > Integrated Apps > Upload custom app.
+  Hosted at: https://dujaje.github.io/reece-icon-packs-8ec81e7cfd/
+  Deploy via Microsoft 365 Admin Center > Integrated Apps > Upload custom app.
 -->
 <OfficeApp
   xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
@@ -21,12 +18,12 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Reece Icon Packs"/>
   <Description DefaultValue="Browse and insert SVG icons from your team's icon library."/>
-  <IconUrl DefaultValue="https://{{GITHUB_USERNAME}}.github.io/{{REPO_NAME}}/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://{{GITHUB_USERNAME}}.github.io/{{REPO_NAME}}/assets/icon-64.png"/>
-  <SupportUrl DefaultValue="https://github.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}"/>
+  <IconUrl DefaultValue="https://dujaje.github.io/reece-icon-packs-8ec81e7cfd/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://dujaje.github.io/reece-icon-packs-8ec81e7cfd/assets/icon-64.png"/>
+  <SupportUrl DefaultValue="https://github.com/dujaje/reece-icon-packs-8ec81e7cfd"/>
 
   <AppDomains>
-    <AppDomain>https://{{GITHUB_USERNAME}}.github.io</AppDomain>
+    <AppDomain>https://dujaje.github.io</AppDomain>
   </AppDomains>
 
   <Hosts>
@@ -35,7 +32,7 @@
   </Hosts>
 
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://{{GITHUB_USERNAME}}.github.io/{{REPO_NAME}}/index.html"/>
+    <SourceLocation DefaultValue="https://dujaje.github.io/reece-icon-packs-8ec81e7cfd/index.html"/>
   </DefaultSettings>
 
   <Permissions>ReadWriteDocument</Permissions>
@@ -119,13 +116,13 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon16" DefaultValue="https://{{GITHUB_USERNAME}}.github.io/{{REPO_NAME}}/assets/icon-16.png"/>
-        <bt:Image id="Icon32" DefaultValue="https://{{GITHUB_USERNAME}}.github.io/{{REPO_NAME}}/assets/icon-32.png"/>
-        <bt:Image id="Icon80" DefaultValue="https://{{GITHUB_USERNAME}}.github.io/{{REPO_NAME}}/assets/icon-80.png"/>
+        <bt:Image id="Icon16" DefaultValue="https://dujaje.github.io/reece-icon-packs-8ec81e7cfd/assets/icon-16.png"/>
+        <bt:Image id="Icon32" DefaultValue="https://dujaje.github.io/reece-icon-packs-8ec81e7cfd/assets/icon-32.png"/>
+        <bt:Image id="Icon80" DefaultValue="https://dujaje.github.io/reece-icon-packs-8ec81e7cfd/assets/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://github.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://{{GITHUB_USERNAME}}.github.io/{{REPO_NAME}}/index.html"/>
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://github.com/dujaje/reece-icon-packs-8ec81e7cfd"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://dujaje.github.io/reece-icon-packs-8ec81e7cfd/index.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GetStarted.Title" DefaultValue="Reece Icon Packs"/>
