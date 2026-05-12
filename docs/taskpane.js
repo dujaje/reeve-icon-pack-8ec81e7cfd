@@ -98,10 +98,16 @@ function renderGrid() {
   };
 }
 
+// SVGs that use fill="currentColor" inherit the host doc's text color, which
+// is often white in PowerPoint and dark Word themes — making the inserted icon
+// invisible. Bake the default color in at insert time. Flags use explicit
+// colors and are unaffected.
+const DEFAULT_ICON_COLOR = '#121214';
+
 async function insertSvg(svgPath) {
   const res = await fetch(svgPath, { cache: 'force-cache' });
   if (!res.ok) throw new Error(`Failed to fetch ${svgPath}`);
-  const svgText = await res.text();
+  const svgText = (await res.text()).replace(/currentColor/gi, DEFAULT_ICON_COLOR);
 
   const host = Office.context.host;
   if (host === Office.HostType.Word) {
